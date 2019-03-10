@@ -185,9 +185,9 @@ class MyApp extends LitElement {
 
         <!-- This gets hidden on a small screen-->
         <nav class="toolbar-list">
-          <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-          <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
-          <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
+          <a ?selected="${this._page === 'view1'}" href="/view1">Bathrooms</a>
+          <a ?selected="${this._page === 'view2'}" href="/view2">Saved</a>
+          <a ?selected="${this._page === 'view3'}" href="/view3">Settings</a>
         </nav>
       </app-header>
 
@@ -196,9 +196,9 @@ class MyApp extends LitElement {
           .opened="${this._drawerOpened}"
           @opened-changed="${this._drawerOpenedChanged}">
         <nav class="drawer-list">
-          <a ?selected="${this._page === 'view1'}" href="/view1">View One</a>
-          <a ?selected="${this._page === 'view2'}" href="/view2">View Two</a>
-          <a ?selected="${this._page === 'view3'}" href="/view3">View Three</a>
+          <a ?selected="${this._page === 'view1'}" href="/view1">Bathrooms</a>
+          <a ?selected="${this._page === 'view2'}" href="/view2">Saved</a>
+          <a ?selected="${this._page === 'view3'}" href="/view3">Settings</a>
         </nav>
       </app-drawer>
 

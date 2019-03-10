@@ -80,6 +80,13 @@ class MyView1 extends PageViewElement {
           padding: 0;
         }
 
+        section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
         @keyframes fadein {
           from {
             opacity: 0;
