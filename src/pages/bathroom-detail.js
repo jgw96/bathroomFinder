@@ -42,17 +42,13 @@ class BathroomDetail extends PageViewElement {
     }
   }
 
-  constructor() {
-    super();
-    console.log('fired');
-  }
-
   async updated() {
     const urlParams = new URLSearchParams(window.location.search);
     const newLat = urlParams.get('lat');
     const newLong = urlParams.get('long');
 
     if (this.lat !== newLat && this.long !== newLong) {
+      this.bathroom = null;
       console.log(this.lat, this.long);
       this.lat = newLat;
       this.long = newLong;
@@ -72,7 +68,7 @@ class BathroomDetail extends PageViewElement {
         <h2>${this.bathroom ? this.bathroom.name : 'loading...'}</h2>
 
         <div id="bathDetail">
-          <p>${this.bathroom ? this.bathroom.comment : null}</p>
+          <p>${this.bathroom ? this.bathroom.comment : 'loading...'}</p>
 
           <div id="detailsDiv">
             <h3>Details</h3>
@@ -84,6 +80,10 @@ class BathroomDetail extends PageViewElement {
 
             <p>Unisex: ${
               this.bathroom ? this.bathroom.unisex ? 'yes' : 'no' : null
+            }</p>
+
+            <p>Accessible: ${
+              this.bathroom ? this.bathroom.accessible ? 'yes' : 'no' : null
             }</p>
           </div>
 

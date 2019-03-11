@@ -148,6 +148,10 @@ class MyApp extends LitElement {
           display: block;
         }
 
+        #backIcon {
+          font-size: 2em;
+        }
+
         /* Wide layout: when the viewport width is bigger than 460px, layout
         changes to a wide layout */
         @media (min-width: 460px) {
@@ -173,13 +177,20 @@ class MyApp extends LitElement {
     ];
   }
 
+  back() {
+    window.history.back();
+  }
+
   render() {
     // Anything that's related to rendering should be done in here.
     return html`
       <!-- Header -->
       <app-header condenses reveals effects="waterfall">
         <app-toolbar class="toolbar-top">
-          <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
+          ${this._page !== 'view1' && this._page !== 'view2' && this._page !== 'view3' && this._page !== 'view4' ?
+          html`<button @click="${this.back}" class="menu-btn" title="Back"><ion-icon id="backIcon" name="arrow-back"></ion-icon></button>`
+          : html`<button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>`
+          }
           <div main-title>${this.appTitle}</div>
         </app-toolbar>
 
