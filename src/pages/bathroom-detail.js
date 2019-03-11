@@ -30,6 +30,23 @@ class BathroomDetail extends PageViewElement {
           border-radius: 20px;
           box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         }
+
+        #navigateButton {
+          position: fixed;
+          bottom: 16px;
+          right: 16px;
+          border-radius: 50%;
+          border: none;
+          height: 56px;
+          width: 56px;
+          background: var(--app-primary-color);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        #navigateButton ion-icon {
+          font-size: 1.8em;
+          color: white;
+        }
       `
     ];
   }
@@ -93,6 +110,10 @@ class BathroomDetail extends PageViewElement {
             <p>${this.bathroom ? this.bathroom.directions : null}</p>
           </div>
         </div>
+
+        <button id="navigateButton">
+          <ion-icon name="navigate"></ion-icon>
+        </button>
       </section>
     `
   }

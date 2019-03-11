@@ -1,0 +1,7 @@
+{
+  "appService.zipIgnorePattern": [
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/f3c84192-2d3d-43ab-9f0e-32eb8623b2a5/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/bathfinder-app",
+  "appService.deploySubpath": "server"
+}
